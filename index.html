@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css?version=1" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="containerInput">
+            <input id="psswrdInput" disabled> 
+            <span id="copyInfoSpan">
+                click to copy
+            </span>
+        </div>
+        <div class="containerLenght">
+            <div class="lenghtHeader">
+                <span>Password Length</span>
+                <span class="sliderValue">15</span>
+            </div>
+            <div class="lenghtRange">
+                <input id="slider" type="range" min="1" max="30" step="1" value="15">
+            </div>
+        </div>
+        <div class="containerSettings">
+            <div class="settingsHeader">
+                <span>Password Settings</span>
+            </div>
+            <div class="settingsList">
+                <div class="optionOne settingsOption">
+                    <input id="lowercase" type="checkbox" checked>
+                    <label>Lowercase (a-z)</label>
+                </div>
+                <div class="optionTwo settingsOption">
+                    <input id="uppercase" type="checkbox">
+                    <label>Uppercase (A-Z)</label>
+                </div>
+                <div class="optionThree settingsOption">
+                    <input id="numbers" type="checkbox">
+                    <label>Numbers (0-9)</label>
+                 </div>
+                <div class="optionFour settingsOption">
+                    <input id="symbols" type="checkbox">
+                    <label>Symbols (!-$^+)</label>
+                </div>
+            </div>
+        </div>
+        <div class="containerFooter">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <button id="buttonGenerate">GENERATE</button>
+                </div>
+                <div class="flip-card-back">
+                    <button id="buttonGenerateSuccess">PASSWORD GENERATED</button>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
