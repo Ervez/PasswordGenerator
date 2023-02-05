@@ -30,11 +30,7 @@ $(function() {
         }, 100);
 
     });
-
-    $(".settingsOption input").click(function(){
-        generatePassword();
-    });
-    
+   
     $(".containerInput").click(function(){
         if(passwordInputValue.value != null){
             $("#copyInfoSpan").addClass("backgroundGreen");
