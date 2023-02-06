@@ -66,6 +66,11 @@ span{
     transform: translateX(266%);
 }
 
+.copyInfoClassMobile{
+    animation: slideinMobile 1.5s;
+    transform: translateX(170%);
+}
+
 .backgroundGreen{
     transition: all 0.9 ease-in-out;
     animation: copied 1.5s;
@@ -85,6 +90,18 @@ span{
   
     to {
       transform: translateX(265%);
+    }
+  }
+
+
+  
+@keyframes slideinMobile {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(170%);
     }
   }
 
@@ -263,3 +280,17 @@ span{
     transform: rotateY(180deg);
 }
 
+
+@media only screen and (max-width: 768px) {
+    .container{
+        max-width: 350px;
+    }
+
+    body label  {
+        font-size: 12px;
+    }
+
+    #psswrdInput {
+        width: 300px;
+    }
+}

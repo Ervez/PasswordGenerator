@@ -15,22 +15,46 @@ $(function() {
     });
     
     $( "#buttonGenerate" ).click(function() {
-        $("#copyInfoSpan").removeClass("copyInfoClass");
-        setTimeout( function(){ 
-        $("#copyInfoSpan").addClass("copyInfoClass");
-        $("#copyInfoSpan").removeClass("visible");
-        generatePassword();
-        $("#copyInfoSpan").addClass("visible");
-        $(".flip-card").addClass("rotate");
-        $(".flip-card-inner").addClass("rotate");
-        setTimeout( function(){ 
-            $(".flip-card").removeClass("rotate");
-            $(".flip-card-inner").removeClass("rotate");
-          }  , 2000 );
-        }, 100);
+        if ($(window).width() < 768) {
+            $("#copyInfoSpan").removeClass("copyInfoClassMobile");
+            setTimeout( function(){ 
+            $("#copyInfoSpan").addClass("copyInfoClassMobile");
+            $("#copyInfoSpan").removeClass("visible");
+            generatePassword();
+            $("#copyInfoSpan").addClass("visible");
+            $(".flip-card").addClass("rotate");
+            $(".flip-card-inner").addClass("rotate");
+            setTimeout( function(){ 
+                $(".flip-card").removeClass("rotate");
+                $(".flip-card-inner").removeClass("rotate");
+              }  , 2000 );
+            }, 100);
+         }
+         else {
+            $("#copyInfoSpan").removeClass("copyInfoClass");
+            setTimeout( function(){ 
+            $("#copyInfoSpan").addClass("copyInfoClass");
+            $("#copyInfoSpan").removeClass("visible");
+            generatePassword();
+            $("#copyInfoSpan").addClass("visible");
+            $(".flip-card").addClass("rotate");
+            $(".flip-card-inner").addClass("rotate");
+            setTimeout( function(){ 
+                $(".flip-card").removeClass("rotate");
+                $(".flip-card-inner").removeClass("rotate");
+              }  , 2000 );
+            }, 100);
+         }
+       
 
     });
    
+    $( window ).resize(function() {
+        $("#copyInfoSpan").removeClass("copyInfoClassMobile");
+        $("#copyInfoSpan").removeClass("copyInfoClass");
+        $("#copyInfoSpan").removeClass("visible");
+      });
+
     $(".containerInput").click(function(){
         if(passwordInputValue.value != null){
             $("#copyInfoSpan").addClass("backgroundGreen");
